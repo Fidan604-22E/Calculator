@@ -1,0 +1,127 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+
+}
+
+body {
+    background-image: linear-gradient(135deg, purple, rgb(181, 4, 181), rgb(204, 0, 255),
+            rgb(153, 51, 255), rgb(102, 0, 255), rgb(55, 55, 207), blue);
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    box-shadow: 10px 10px 5px rgb(90, 12, 145);
+    height: 95%;
+    width: 25%;
+}
+
+.equal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    color: #eeeeee;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 28px;
+    z-index: 1;
+    top: 580px;
+    left: 459px;
+}
+
+#computation {
+    height: 30%;
+    border: none;
+    background: transparent;
+    float: left;
+}
+
+#answer,
+#computation {
+    width: 80%;
+    color: #eeeeee;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 28px;
+    text-align: right;
+}
+
+#answer {
+    height: 10%;
+    border-bottom: 2px solid #8260a2bc;
+    margin-bottom: 30px;
+    height: 100%;
+    background: transparent;
+}
+
+
+.numbers {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(4, 60px);
+    column-gap: 20px;
+    row-gap: 15px;
+    grid-template-rows: repeat(5, 60px);
+    width: 100%;
+    height: 60%;
+    place-items: center;
+}
+
+.numbers button {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: none;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+.num {
+    box-shadow: -4px -3px 10px 5px rgb(126, 126, 126) inset;
+}
+
+.op {
+    background-color: #8260a2;
+    color: #eeeeee;
+    box-shadow: -4px -3px 10px 5px #6d4890 inset;
+
+}
+
+.op:hover {
+    background-color: #a871db;
+}
+
+.op:hover,
+.num:hover {
+    font-size: 30px;
+    box-shadow: 0px 0px;
+}
+
+.num:active {
+    font-size: 27px;
+    box-shadow: -4px -3px 10px 5px rgb(126, 126, 126) inset;
+    background-color: white;
+}
+
+.op:active {
+    font-size: 27px;
+    box-shadow: -4px -3px 10px 5px #6d4890 inset;
+    background-color: #8260a2;
+}
