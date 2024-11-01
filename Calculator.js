@@ -66,18 +66,21 @@ numButton.forEach(button => {
         else if (button.textContent === "%") {
 
             let last = checkLast();
+            let slice = sliceLastNum();
 
             if (last == 1 || last == 4) {
-                let slice = sliceLastNum();
                 comp.value = comp.value.slice(0, comp.value.length - slice.length);
                 comp.value += Number(slice / 100);
             }
 
             else if (last == 3) {
                 comp.value = comp.value.slice(0, comp.value.length - 1);
-                let slice = sliceLastNum();
                 comp.value = comp.value.slice(0, comp.value.length - slice.length);
                 comp.value += Number(slice / 100) + ")";
+            }
+
+            if(slice.includes(".")){
+                dotFlag = false;
             }
         }
 
@@ -163,8 +166,18 @@ numButton.forEach(button => {
         // Adds numbers
         else {
             let last = checkLast();
+            let slice = sliceLastNum();
 
-            if (last == 1 || last == 2 || last == 4) {
+            if(last == 1){
+                if(dotFlag == false){
+                    if(slice != "0")
+                    comp.value += button.textContent;
+                }
+                else{
+                    comp.value += button.textContent;
+                }
+            }
+            else if (last == 2 || last == 4) {
                 comp.value += button.textContent;
             }
         }
